@@ -198,4 +198,12 @@ class Users {
         this._age = value;
     }
 }
+//  static members
 let u3 = new Users('rahman', 45);
+class shery {
+    static getRandomNumber() {
+        return Math.random();
+    }
+}
+shery.version = 1;
+// abstract class 

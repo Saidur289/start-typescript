@@ -202,4 +202,12 @@ class Users{
         this._age = value
     }
 }
+//  static members
 let u3 = new Users('rahman', 45)
+class shery {
+    static version = 1 
+    static getRandomNumber(){
+        return Math.random()
+    }
+}
+// abstract class 
