@@ -207,3 +207,13 @@ class shery {
 }
 shery.version = 1;
 // abstract class 
+// we did not make instance of main class means root or base classes 
+class CookingEssential {
+    constructor(gas, gasName) {
+        this.gas = gas;
+        this.gasName = gasName;
+    }
+}
+// new CookingEssential  it is not doing because data will sensitive 
+class Sabji extends CookingEssential {
+}

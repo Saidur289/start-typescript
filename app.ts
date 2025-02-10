@@ -211,3 +211,9 @@ class shery {
     }
 }
 // abstract class 
+// we did not make instance of main class means root or base classes 
+class CookingEssential{
+    constructor(protected gas: number, public gasName: string){}
+}
+// new CookingEssential  it is not doing because data will sensitive 
+class Sabji extends CookingEssential{}
