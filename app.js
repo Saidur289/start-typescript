@@ -295,3 +295,11 @@ function abcdefgh(a, b) {
 }
 abcdefgh('hey');
 abcdefgh('saidurrahman', 345);
+// generic 
+function xyz(a) {
+    console.log(a);
+}
+xyz('sheik riaz');
+xyz(50);
+xyz('heyyyyyy');
+xyz(999999999999);

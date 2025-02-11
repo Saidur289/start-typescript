@@ -258,3 +258,11 @@ function abcdefgh(a:any, b?: any){
 }
 abcdefgh('hey')
 abcdefgh('saidurrahman', 345)
+// generic 
+function xyz<T>(a: T){
+    console.log(a);
+}
+xyz('sheik riaz')
+xyz(50)
+xyz<string>('heyyyyyy')
+xyz<number>(999999999999)
