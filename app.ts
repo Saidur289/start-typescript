@@ -241,3 +241,20 @@ function friends(...arr: string[]){
     console.log('name of string', arr);
 }
 friends('amar', 'shahid')
+// Overloads  
+function abcdefgh(a: string): void;
+function abcdefgh(a: string, b: number): number;
+function abcdefgh(a:any, b?: any){
+    if(typeof a === 'string' && b === undefined){
+        console.log('hello world');
+    }
+    else if(typeof a === 'string' && typeof b ===  "number"){
+        return 123
+    }
+    else throw new Error('something wrong')
+    
+    
+
+}
+abcdefgh('hey')
+abcdefgh('saidurrahman', 345)

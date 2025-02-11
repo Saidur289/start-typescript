@@ -283,3 +283,15 @@ function friends() {
     console.log('name of string', arr);
 }
 friends('amar', 'shahid');
+function abcdefgh(a, b) {
+    if (typeof a === 'string' && b === undefined) {
+        console.log('hello world');
+    }
+    else if (typeof a === 'string' && typeof b === "number") {
+        return 123;
+    }
+    else
+        throw new Error('something wrong');
+}
+abcdefgh('hey');
+abcdefgh('saidurrahman', 345);
