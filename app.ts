@@ -217,3 +217,27 @@ class CookingEssential{
 }
 // new CookingEssential  it is not doing because data will sensitive 
 class Sabji extends CookingEssential{}
+function abcde(name: string, cb:(value: string)=> void){
+    console.log(name, 'from main function');
+    cb('saidur')
+}
+abcde('rahman', (value: string) => {
+    console.log(value);
+})
+// optional and rest parameter 
+function acedf(name: string, age: number, gender?: string){
+    console.log(name, age, gender);
+}
+acedf('sheidjkf', 55, 'male')
+function aqqqq(name: string, age: number, gender: string = 'do no know'){
+    console.log(name, age, gender);
+}
+aqqqq('sheraa', 90)
+function sum(...arr:number[]){
+    console.log('array of number', arr);
+}
+sum(5,7,7,54)
+function friends(...arr: string[]){
+    console.log('name of string', arr);
+}
+friends('amar', 'shahid')

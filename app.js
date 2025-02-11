@@ -1,4 +1,3 @@
-"use strict";
 // var a = 12
 // console.log(a);
 // array 
@@ -40,6 +39,21 @@
 // let a: number = 12 
 // null, undefined, never 
 // let a = null 
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // let a: string | null 
 // a= 12 error dive 
 // let a : undefined 
@@ -171,49 +185,101 @@
 // const n1 = new User('saidur')
 // // n1.changeName()
 // parameter 
-class User {
-    constructor(name, age, gender) {
+var User = /** @class */ (function () {
+    function User(name, age, gender) {
         this.name = name;
         this.age = age;
         this.gender = gender;
     }
-}
-let u1 = new User('saidur', 25, 'male');
-let u2 = new User('shahida', 26);
-class Users {
-    constructor(_name, _age) {
+    return User;
+}());
+var u1 = new User('saidur', 25, 'male');
+var u2 = new User('shahida', 26);
+var Users = /** @class */ (function () {
+    function Users(_name, _age) {
         this._name = _name;
         this._age = _age;
     }
-    get name() {
-        return this._name;
-    }
-    get age() {
-        return this._age;
-    }
-    set name(value) {
-        this._name = value;
-    }
-    set age(value) {
-        this._age = value;
-    }
-}
+    Object.defineProperty(Users.prototype, "name", {
+        get: function () {
+            return this._name;
+        },
+        set: function (value) {
+            this._name = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Users.prototype, "age", {
+        get: function () {
+            return this._age;
+        },
+        set: function (value) {
+            this._age = value;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Users;
+}());
 //  static members
-let u3 = new Users('rahman', 45);
-class shery {
-    static getRandomNumber() {
-        return Math.random();
+var u3 = new Users('rahman', 45);
+var shery = /** @class */ (function () {
+    function shery() {
     }
-}
-shery.version = 1;
+    shery.getRandomNumber = function () {
+        return Math.random();
+    };
+    shery.version = 1;
+    return shery;
+}());
 // abstract class 
 // we did not make instance of main class means root or base classes 
-class CookingEssential {
-    constructor(gas, gasName) {
+var CookingEssential = /** @class */ (function () {
+    function CookingEssential(gas, gasName) {
         this.gas = gas;
         this.gasName = gasName;
     }
-}
+    return CookingEssential;
+}());
 // new CookingEssential  it is not doing because data will sensitive 
-class Sabji extends CookingEssential {
+var Sabji = /** @class */ (function (_super) {
+    __extends(Sabji, _super);
+    function Sabji() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Sabji;
+}(CookingEssential));
+function abcde(name, cb) {
+    console.log(name, 'from main function');
+    cb('saidur');
 }
+abcde('rahman', function (value) {
+    console.log(value);
+});
+// optional and rest parameter 
+function acedf(name, age, gender) {
+    console.log(name, age, gender);
+}
+acedf('sheidjkf', 55, 'male');
+function aqqqq(name, age, gender) {
+    if (gender === void 0) { gender = 'do no know'; }
+    console.log(name, age, gender);
+}
+aqqqq('sheraa', 90);
+function sum() {
+    var arr = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        arr[_i] = arguments[_i];
+    }
+    console.log('array of number', arr);
+}
+sum(5, 7, 7, 54);
+function friends() {
+    var arr = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        arr[_i] = arguments[_i];
+    }
+    console.log('name of string', arr);
+}
+friends('amar', 'shahid');
